@@ -20,16 +20,6 @@
 #pragma comment(lib, "dxguid.lib")
 #pragma comment(lib, "dxgi.lib")
 
-template <typename T>
-inline void SafeRelease( T& x )
-{
-	if( x )
-	{
-		x->Release();
-		x = NULL;
-	}
-}
-
 //
 static const uint32_t WindowWidth = 1280;
 static const uint32_t WindowHeight = 720;
