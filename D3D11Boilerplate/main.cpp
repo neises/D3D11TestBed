@@ -388,7 +388,7 @@ void Update( Context* _pContext )
 {
 	float colour_array[ 4 ] = { 0.1f, 0.1f, 0.1f, 1.0f };
 	_pContext->pDeviceContext->ClearRenderTargetView( _pContext->pBackBufferRTV.Get(), colour_array );
-	_pContext->pDeviceContext->ClearDepthStencilView( _pContext->pDepthStencilView.Get(), D3D11_CLEAR_DEPTH, 1.0f, 0.0f );
+	_pContext->pDeviceContext->ClearDepthStencilView( _pContext->pDepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL , 1.0f, 0.0f );
 
 	static float t = 0.0f;
 	static DWORD dwTimeStart = 0;
